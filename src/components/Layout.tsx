@@ -1,26 +1,18 @@
-import React from 'react';
+import type { ReactNode } from "react";
+import Header from "./Layout/Header.tsx";
+import Footer from "./Layout/Footer.tsx";
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const renderHeader = () => {
-    // TODO: Implement header
-    return <div>Header</div>;
-  };
-
-  const renderToolbar = () => {
-    // TODO: Implement toolbar
-    return <div>Toolbar</div>;
-  };
-
+const Layout = ({ children }: LayoutProps) => {
   return (
-    <div>
-      {renderHeader()}
-      {renderToolbar()}
-      {children}
-    </div>
+    <>
+      <Header />
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">{children}</main>
+      <Footer />
+    </>
   );
 };
 
