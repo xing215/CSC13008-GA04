@@ -52,7 +52,7 @@ export const ConfigPage: React.FC = () => {
                                     overwrite your current data).
                                 </p>
                             </div>
-                            <Button onClick={importData}>
+                            <Button onClick={importData} className="cursor-pointer">
                                 <ImportIcon />
                             </Button>
                         </li>
@@ -67,7 +67,7 @@ export const ConfigPage: React.FC = () => {
                                     Save data into file.
                                 </p>
                             </div>
-                            <Button onClick={exportData}>
+                            <Button onClick={exportData} className="cursor-pointer">
                                 <ExportIcon />
                             </Button>
                         </li>
@@ -86,6 +86,7 @@ export const ConfigPage: React.FC = () => {
                             <Button
                                 variant="danger"
                                 onClick={() => setIsModalOpen(true)}
+                                className="cursor-pointer"
                             >
                                 <DeleteIcon />
                             </Button>
